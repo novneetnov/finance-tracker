@@ -1,2 +1,20 @@
 This is a Finance Tracker App. The aim of this project is: rapid prototyping. 
 This will be mobile-responsive too.
+
+Q) Why do we need a stocks model or stocks.rb?
+A) In this app every user has a collection of stocks tha he/she tracks. So there is a need for a stocks table in the database and a corresponding stocks model with a :user_id foreign key. Hence, it will be one-many relation. But a better design will be many-many, as the same stock can be tracked by different users. These two tables have to be joined by a joined table.
+
+Q) Why do we need route to search_stocks?
+A) In each users signed in user's portfolio page, we need to provide a form that will look up a stock from the Yahoo API(stock_quote gem). What should happen when that lookup-stock button is pressed? A controller action will look for the stock in the database, and if not present look for the stock by the stock_quote gem. 
+..........
+Todo
+..........
+
+Q) What does the <% if @stock %> block do in the lookup form? 
+A) 
+
+Q) Why did we use form_tag instead of form_for in the lookup partial?
+A) When we a Model, a corresponding database table, and a form is going to be built for that model, we use form_for. A model is passed to that form_for and a form is built easily and submitted by post method.    
+
+Q) In text_field_tag(name, value, options), "value" attribute was set to stock[:params] in lookup.html.erb ?
+A)  
