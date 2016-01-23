@@ -24,5 +24,5 @@ find_by_ticker	app/models/stock.rb	/^	def self.find_by_ticker(ticker_symbol)$/;"
 index	app/controllers/welcome_controller.rb	/^	def index$/;"	f	class:WelcomeController
 my_portfolio	app/controllers/users_controller.rb	/^	def my_portfolio$/;"	f	class:UsersController
 new_from_lookup	app/models/stock.rb	/^	def self.new_from_lookup(ticker_symbol)$/;"	F	class:Stock
-price	app/models/stock.rb	/^	def price(ticker)$/;"	f	class:Stock
+price	app/models/stock.rb	/^	def price$/;"	f	class:Stock
 search	app/controllers/stocks_controller.rb	/^	def search$/;"	f	class:StocksController

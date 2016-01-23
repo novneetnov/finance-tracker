@@ -9,6 +9,7 @@ class StocksController < ApplicationController
 		# debugger
 
 		if @stock
+			#debugger
 			render partial: 'lookup'
 			#render json: @stock
 		else

@@ -11,10 +11,12 @@ Todo
 ..........
 
 Q) What does the <% if @stock %> block do in the lookup form? 
-A) 
+A) The Process goes like this: 
+signedin-user/my_portfolio ---> render 'stocks/lookup' (@stock = nil here) ---> submit form to route search_stocks_path via :get ---> so upon pressing the lookup button the url will be /search_stocks?AAPL ---> invokes the stocks#search action ---> Looks up stock in the database and if not present then via Yahoo Api ---> @stock will be Stock Object or nil ---> if @stock then render 'lookup' again ---> renders the ajax form, but this time @stocks is not nil but AAPL, that shows in the <% if @stock %> 
 
 Q) Why did we use form_tag instead of form_for in the lookup partial?
 A) When we a Model, a corresponding database table, and a form is going to be built for that model, we use form_for. A model is passed to that form_for and a form is built easily and submitted by post method.    
 
 Q) In text_field_tag(name, value, options), "value" attribute was set to stock[:params] in lookup.html.erb ?
-A)  
+A) The route search_stocks_path & value params[:stock] is same as /search_stocks?stock=AAPL
+In /search_stocks?AAPL, params[:stock] is {stock: "AAPL"}. Hence, the first time lookup is rendered, params[:stock] is nil, hence form is blank. However, if AAPL is searched, params[:stock] = "AAPL". Hence the input field will show the last search.
