@@ -1,4 +1,4 @@
-<div class="stock-lookup">
+<div id="stock-lookup">
 	<h3>Search for Stocks</h3>
 	<%= form_tag search_stocks_path, remote: true, method: :get, id: "stock-lookup-form" do %>
 		<div class="form-group row col-md-12 no-padding">
@@ -15,9 +15,10 @@
 	<% end %>
 	<% if @stock %>
 		<div id="stocks-lookup-results" class="well results-block">
-			<strong>Symbol: </strong><%= @stock.symbol %>
+			<strong>Symbol: </strong><%= @stock.ticker %>
 			<strong>Name: </strong><%= @stock.name %>
 			<strong>Price: </strong><%= @stock.price %>
 		</div>
 	<% end %>
+	<div id="stock-lookup-errors"></div>
 </div>

@@ -22,6 +22,7 @@ change	db/migrate/20160121120306_devise_create_users.rb	/^  def change$/;"	f	cla
 change	db/migrate/20160121153128_create_stocks.rb	/^  def change$/;"	f	class:CreateStocks
 find_by_ticker	app/models/stock.rb	/^	def self.find_by_ticker(ticker_symbol)$/;"	F	class:Stock
 index	app/controllers/welcome_controller.rb	/^	def index$/;"	f	class:WelcomeController
+init_stock_lookup	app/assets/javascripts/stocks.js	/^var init_stock_lookup = function() {$/;"	f
 my_portfolio	app/controllers/users_controller.rb	/^	def my_portfolio$/;"	f	class:UsersController
 new_from_lookup	app/models/stock.rb	/^	def self.new_from_lookup(ticker_symbol)$/;"	F	class:Stock
 price	app/models/stock.rb	/^	def price$/;"	f	class:Stock

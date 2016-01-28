@@ -6,7 +6,7 @@ class StocksController < ApplicationController
 			@stock ||= Stock.new_from_lookup(params[:stock])
 		end
 
-		# debugger
+		 #debugger
 
 		if @stock
 			#debugger
