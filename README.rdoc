@@ -19,10 +19,16 @@ A) When we a Model, a corresponding database table, and a form is going to be bu
 
 Q) In text_field_tag(name, value, options), "value" attribute was set to stock[:params] in lookup.html.erb ?
 A) The route search_stocks_path & value params[:stock] is same as /search_stocks?stock=AAPL
-In /search_stocks?AAPL, params[:stock] is {stock: "AAPL"}. Hence, the first time lookup is rendered, params[:stock] is nil, hence form is blank. However, if AAPL is searched, params[:stock] = "AAPL". Hence the input field will show the last search.
+In /search_stocks?AAPL, params[:stock] is {stock: "AAPL"}. 
+Hence, the first time lookup is rendered, params[:stock] is nil, hence form is blank. 
+However, if AAPL is searched, params[:stock] = "AAPL". Hence the input field will show the last search.
 
 Q) Why does the ajax request doesn't work without a stocks.js file? In other words, where the pipeline is broken in the request-response cycle?
-A)  
+A) Whenever any view(html) is rendered, the browser looks for any associated css and javascript files. 
+So the javascript files will be rendered for any view not just for the _lookup partial. 
+In the final step, rails sends the browser the required html to be rendered, all the css files and all the javascript files in the development mode. 
+In the production mode, however, all the css and javascript files are compiled into one application.css and
+application.js file. 
 
 Q) Why do we need a stocks.js file and who calls for it? And why the name stocks.js ? 
 And how does _lookup.html.erb know that it should use stocks.js? 
