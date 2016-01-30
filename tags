@@ -9,21 +9,39 @@ Application	config/application.rb	/^  class Application < Rails::Application$/;"
 ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
 ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
 CreateStocks	db/migrate/20160121153128_create_stocks.rb	/^class CreateStocks < ActiveRecord::Migration$/;"	c
+CreateUserStocks	db/migrate/20160129152058_create_user_stocks.rb	/^class CreateUserStocks < ActiveRecord::Migration$/;"	c
 DeviseCreateUsers	db/migrate/20160121120306_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration$/;"	c
 FinanceTracker	config/application.rb	/^module FinanceTracker$/;"	m
 Stock	app/models/stock.rb	/^class Stock < ActiveRecord::Base$/;"	c
 StockTest	test/models/stock_test.rb	/^class StockTest < ActiveSupport::TestCase$/;"	c
 StocksController	app/controllers/stocks_controller.rb	/^class StocksController < ApplicationController$/;"	c
 User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+UserStock	app/models/user_stock.rb	/^class UserStock < ActiveRecord::Base$/;"	c
+UserStockTest	test/models/user_stock_test.rb	/^class UserStockTest < ActiveSupport::TestCase$/;"	c
+UserStocksController	app/controllers/user_stocks_controller.rb	/^class UserStocksController < ApplicationController$/;"	c
+UserStocksControllerTest	test/controllers/user_stocks_controller_test.rb	/^class UserStocksControllerTest < ActionController::TestCase$/;"	c
+UserStocksHelper	app/helpers/user_stocks_helper.rb	/^module UserStocksHelper$/;"	m
 UserTest	test/models/user_test.rb	/^class UserTest < ActiveSupport::TestCase$/;"	c
 UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
 WelcomeController	app/controllers/welcome_controller.rb	/^class WelcomeController < ApplicationController$/;"	c
 change	db/migrate/20160121120306_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
 change	db/migrate/20160121153128_create_stocks.rb	/^  def change$/;"	f	class:CreateStocks
+change	db/migrate/20160129152058_create_user_stocks.rb	/^  def change$/;"	f	class:CreateUserStocks
+create	app/controllers/user_stocks_controller.rb	/^  def create$/;"	f	class:UserStocksController
+destroy	app/controllers/user_stocks_controller.rb	/^  def destroy$/;"	f	class:UserStocksController
+edit	app/controllers/user_stocks_controller.rb	/^  def edit$/;"	f	class:UserStocksController
 find_by_ticker	app/models/stock.rb	/^	def self.find_by_ticker(ticker_symbol)$/;"	F	class:Stock
+hide_spinner	app/assets/javascripts/application.js	/^var hide_spinner = function() {$/;"	f
+index	app/controllers/user_stocks_controller.rb	/^  def index$/;"	f	class:UserStocksController
 index	app/controllers/welcome_controller.rb	/^	def index$/;"	f	class:WelcomeController
 init_stock_lookup	app/assets/javascripts/stocks.js	/^var init_stock_lookup = function() {$/;"	f
 my_portfolio	app/controllers/users_controller.rb	/^	def my_portfolio$/;"	f	class:UsersController
+new	app/controllers/user_stocks_controller.rb	/^  def new$/;"	f	class:UserStocksController
 new_from_lookup	app/models/stock.rb	/^	def self.new_from_lookup(ticker_symbol)$/;"	F	class:Stock
 price	app/models/stock.rb	/^	def price$/;"	f	class:Stock
 search	app/controllers/stocks_controller.rb	/^	def search$/;"	f	class:StocksController
+set_user_stock	app/controllers/user_stocks_controller.rb	/^    def set_user_stock$/;"	f	class:UserStocksController
+show	app/controllers/user_stocks_controller.rb	/^  def show$/;"	f	class:UserStocksController
+show_spinner	app/assets/javascripts/application.js	/^var show_spinner = function() {$/;"	f
+update	app/controllers/user_stocks_controller.rb	/^  def update$/;"	f	class:UserStocksController
+user_stock_params	app/controllers/user_stocks_controller.rb	/^    def user_stock_params$/;"	f	class:UserStocksController
