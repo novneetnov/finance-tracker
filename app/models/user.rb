@@ -19,4 +19,9 @@ class User < ActiveRecord::Base
 		return user_stocks.include?(stock)
 	end
 
+	def full_name
+		return "#{self.first_name} #{self.last_name}".strip if self.first_name || self.last_name
+		"Anonymous"
+	end
+
 end

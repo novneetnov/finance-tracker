@@ -39,3 +39,9 @@ A)
 
 Q) In the routes we did: "resources: user_stocks, except: [:edit, :update :destroy]". Why was :index action not excluded? Where will we require it? When a user's stocks are displayed in the my_portfolio page, which controller#action will be called?
 A) 
+
+Q) Why full_name method was added to User Model? Maybe we will need it later.
+A) 
+
+In the Devise documentation, all the additional fields like username are configurable in the Application Controller. But a better way is to  make a class RegistrationsController < Devise::RegistrationsController.
+And then specify this in the routes file: devise_for :users, controller: {registrations: "user/registrations"} 
