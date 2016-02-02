@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
 	end
 
 	def stock_already_added?(ticker_symbol)
-		stock = self.find_by_ticker(ticker_symbol)
+		stock = Stock.find_by_ticker(ticker_symbol)
 		return !stock.nil?
 	end
 
