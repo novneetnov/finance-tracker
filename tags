@@ -5,6 +5,7 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+AddFirstAndLastNameToUsers	db/migrate/20160202120004_add_first_and_last_name_to_users.rb	/^class AddFirstAndLastNameToUsers < ActiveRecord::Migration$/;"	c
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:FinanceTracker
 ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
 ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
@@ -15,6 +16,7 @@ FinanceTracker	config/application.rb	/^module FinanceTracker$/;"	m
 Stock	app/models/stock.rb	/^class Stock < ActiveRecord::Base$/;"	c
 StockTest	test/models/stock_test.rb	/^class StockTest < ActiveSupport::TestCase$/;"	c
 StocksController	app/controllers/stocks_controller.rb	/^class StocksController < ApplicationController$/;"	c
+User	app/controllers/user/registrations_controller.rb	/^class User::RegistrationsController < Devise::RegistrationsController$/;"	c
 User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
 UserStock	app/models/user_stock.rb	/^class UserStock < ActiveRecord::Base$/;"	c
 UserStockTest	test/models/user_stock_test.rb	/^class UserStockTest < ActiveSupport::TestCase$/;"	c
@@ -28,10 +30,13 @@ can_add_stock?	app/models/user.rb	/^	def can_add_stock?(ticker_symbol)$/;"	f	cla
 change	db/migrate/20160121120306_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
 change	db/migrate/20160121153128_create_stocks.rb	/^  def change$/;"	f	class:CreateStocks
 change	db/migrate/20160129152058_create_user_stocks.rb	/^  def change$/;"	f	class:CreateUserStocks
+change	db/migrate/20160202120004_add_first_and_last_name_to_users.rb	/^  def change$/;"	f	class:AddFirstAndLastNameToUsers
+configure_permitted_parameters	app/controllers/user/registrations_controller.rb	/^	def configure_permitted_parameters$/;"	f	class:User
 create	app/controllers/user_stocks_controller.rb	/^  def create$/;"	f	class:UserStocksController
 destroy	app/controllers/user_stocks_controller.rb	/^  def destroy$/;"	f	class:UserStocksController
 edit	app/controllers/user_stocks_controller.rb	/^  def edit$/;"	f	class:UserStocksController
 find_by_ticker	app/models/stock.rb	/^	def self.find_by_ticker(ticker_symbol)$/;"	F	class:Stock
+full_name	app/models/user.rb	/^	def full_name$/;"	f	class:User
 hide_spinner	app/assets/javascripts/application.js	/^var hide_spinner = function() {$/;"	f
 index	app/controllers/user_stocks_controller.rb	/^  def index$/;"	f	class:UserStocksController
 index	app/controllers/welcome_controller.rb	/^	def index$/;"	f	class:WelcomeController

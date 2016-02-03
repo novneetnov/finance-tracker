@@ -43,5 +43,8 @@ A)
 Q) Why full_name method was added to User Model? Maybe we will need it later.
 A) 
 
+Q) Why did we create user/registrations_controller.rb? Why not in the controllers/ folder?
+A)
+
 In the Devise documentation, all the additional fields like username are configurable in the Application Controller. But a better way is to  make a class RegistrationsController < Devise::RegistrationsController.
 And then specify this in the routes file: devise_for :users, controller: {registrations: "user/registrations"} 
