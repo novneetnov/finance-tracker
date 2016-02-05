@@ -1,7 +1,7 @@
 <div id="stock-lookup">
 	<h3>Search for Stocks</h3>
 	<%= form_tag search_stocks_path, remote: true, method: :get, id: "stock-lookup-form" do %>
-		<div class="form-group row col-md-12 no-padding">
+		<div class="form-group col-md-12 no-padding">
 			<div class="col-md-10 no-padding">
 				<%= text_field_tag :stock, params[:stock], placeholder: "Stock ticker symbol", autofocus: true,
 																	 class: 'form-control input-lg search-box' %>
