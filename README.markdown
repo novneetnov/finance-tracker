@@ -1,5 +1,7 @@
 # The Social Stocks Tracker App  
 
+Users need to signup to use the app.
+
 ### Heroku Link: https://finance-stocks-tracker-app.herokuapp.com  
 
 ### Functionalities of the App:
